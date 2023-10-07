@@ -1,0 +1,18 @@
+﻿using DesignPattern.Facade.DAL;
+
+namespace DesignPattern.Facade.FacadePattern
+{
+    public class AddOrder
+    {
+        Context context = new Context();
+
+        public void AddNewOrder(Order order)
+        {
+            order.DateTime = DateTime.Parse(DateTime.Now.ToShortDateString());
+            context.Orders.Add(order);
+            context.SaveChanges();
+
+        }
+
+    }
+}

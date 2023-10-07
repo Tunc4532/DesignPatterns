@@ -1,0 +1,36 @@
+﻿@model List<Catagory>
+@{
+    Layout = null;
+}
+<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Listeleme Sayfası</title>
+</head>
+<body>
+    <div class="container">
+        <br />
+        <table class="table-bordered">
+            <tr>
+                <th>#</th>
+                <th>Katagori Adı</th>
+                <th>Sil</th>
+                <th>Güncelle</th>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.CatagoryID</td>
+                    <td>@item.CatagoryName</td>
+                    <td><a class="btn btn-outline-danger" href="/Catagory/DeleteCatagory/">Sil</a></td>
+                    <td><a class="btn btn-outline-warning" href="/Catagory/EditCatagory/">Güncelle</a></td>
+                </tr>
+            }
+        </table>
+        <a class="btn btn-outline-primary" href="/Catagory/AddCatagory/">Yeni Katagori Ekle</a>
+    </div>
+</body>
+</html>

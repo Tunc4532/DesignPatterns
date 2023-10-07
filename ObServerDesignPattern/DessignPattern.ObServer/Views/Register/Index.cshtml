@@ -1,0 +1,28 @@
+﻿@model DessignPattern.ObServer.Models.RegisterViewmodel
+
+@{
+    Layout = null;
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+<div class="container">
+    <br />
+    <form method="post">
+        <span class="form-text">Adınız</span>
+        <input type="text" class="form-control" asp-for="Name" />
+        <br />
+        <span class="form-text">Soyadınız</span>
+        <input type="text" class="form-control" asp-for="SurName" />
+        <br />
+        <span class="form-text">Kullanıcı Adı</span>
+        <input type="text" class="form-control" asp-for="UserName" />
+        <br />
+        <span class="form-text">Mail Adresiniz</span>
+        <input type="text" class="form-control" asp-for="Email" />
+        <br />
+        <span class="form-text">Şifreniz</span>
+        <input type="password" class="form-control" asp-for="Password" />
+        <br />
+        <button class="btn btn-info">Kayıt Ol</button>
+    </form>
+</div>
